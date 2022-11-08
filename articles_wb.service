@@ -1,0 +1,14 @@
+[Unit]
+Description=articles_wb
+After=syslog.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/python/wb_price
+ExecStart=/usr/bin/python3 articles_bot.py
+RestartSec=10
+Restart=always
+ 
+[Install]
+WantedBy=multi-user.target
